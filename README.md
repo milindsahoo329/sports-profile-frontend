@@ -6,4 +6,4 @@
 
 2. Run command on terminal - npm install
 
-2. Run command on terminal - npm start
+3. Run command on terminal - npm start
