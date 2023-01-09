@@ -8,13 +8,17 @@
     margin-top: 5%;
 }
 
+.back-button {
+    margin: 2%;
+}
+
 .page-title {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 3em;
 }
 
-.card-holder {
-    margin-top: 5%;
+.site-card-wrapper {
+    margin: 5%;
 }
 
 .landing-cards {
