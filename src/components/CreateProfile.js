@@ -121,7 +121,7 @@ const CreateProfile = ({}) => {
                 <Radio.Group name="gender">
                     <Radio value="Male"> Male </Radio>
                     <Radio value="Female"> Female </Radio>
-                    <Radio value="Transgender"> Female </Radio>
+                    <Radio value="Transgender"> Transgender </Radio>
                     <Radio value="NA"> Prefer Not to Say </Radio>
                 </Radio.Group>
             </Form.Item>
