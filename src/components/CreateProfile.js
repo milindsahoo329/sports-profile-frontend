@@ -28,21 +28,21 @@ const CreateProfile = ({}) => {
     const navigate = useNavigate();
 
     const onFinish = (values) => {
-        // console.log("Success:", values);
-        //Can directly call props here
 
         let payload = {
             name : values.name,
-            dob : ((Number(values.dob['$M'])+1)+"-"+values.dob['$d']+"-"+values.dob['$y']),
-            location : values.location
+            dob : ((Number(values.dob['$M'])+1)+"-"+values.dob['$D']+"-"+values.dob['$y']),
+            location : values.location,
+            interests : values.interests,
+            team : values.team,
+            gender : values.gender,
+            about : values.about
         }
 
-        console.log(payload);
-
-        // ProfilesService.createProfile(payload)
-        //     .then((response) => {
-        //         console.log(response);
-        //     })
+        ProfilesService.createProfile(payload)
+            .then((response) => {
+                // console.log(response);
+            })
 
         navigate('/view');
     };
@@ -97,12 +97,28 @@ const CreateProfile = ({}) => {
                 <Input name="location"/>
             </Form.Item>
 
-            <Form.Item label="Team">
-                <Input />
+            <Form.Item 
+                label="Team"
+                name="team"
+                rules={[
+                    {
+                      required: true,
+                      message: "Please input your Team"
+                    }
+                ]}>
+                <Input name="team"/>
             </Form.Item>
 
-            <Form.Item label="Gender">
-                <Radio.Group>
+            <Form.Item 
+                label="Gender"
+                name="gender"
+                rules={[
+                    {
+                      required: true,
+                      message: "Please select an option"
+                    }
+                ]}>
+                <Radio.Group name="gender">
                     <Radio value="Male"> Male </Radio>
                     <Radio value="Female"> Female </Radio>
                     <Radio value="Transgender"> Female </Radio>
@@ -110,12 +126,26 @@ const CreateProfile = ({}) => {
                 </Radio.Group>
             </Form.Item>
 
-            <Form.Item label="About">
-                <TextArea rows={4} />
+            <Form.Item 
+                label="About"
+                name="about"
+                rules={[
+                    {
+                      required: false
+                    }
+                ]}>
+                <TextArea name="about" rows={4} />
             </Form.Item>
 
-            <Form.Item label="Interests">
-                <TextArea rows={4} />
+            <Form.Item
+                label="Interests"
+                name="interests"
+                rules={[
+                    {
+                      required: false
+                    }
+                ]}>
+                <TextArea name="interests" rows={4} />
             </Form.Item>
 
             <Form.Item>

@@ -7,7 +7,7 @@ class ProfileService {
     }
 
     getAllProfiles(data) {
-        return axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/v1/profiles/all`, data);
+        return axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/v1/profiles/all`, data);
     }
 
     createProfile(data) {
