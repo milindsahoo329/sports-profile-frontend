@@ -25,7 +25,7 @@ function App() {
           <Route exact path={"/view"} element={
             <ViewProfiles />}
           />
-          <Route exact path={"/edit"} element={
+          <Route exact path={"/edit/:id/"} element={
             <EditProfile />}
           />
         </Routes>

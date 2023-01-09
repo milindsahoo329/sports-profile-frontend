@@ -41,7 +41,7 @@ const ViewProfiles = ({}) => {
                         profiles.map((x) => {
                             return (
                                 <Col span={8}>
-                                <Link to={"/edit"}>
+                                <Link to={"/edit/" + x.id }>
                                     <Card title={x.name} bordered={false} hoverable>
                                         {"Team - " + x.team + " , " + "Location - " + x.location}
                                     </Card>
