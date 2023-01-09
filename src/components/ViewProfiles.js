@@ -42,7 +42,7 @@ const ViewProfiles = ({}) => {
                             return (
                                 <Col span={8}>
                                 <Link to={"/edit/" + x.id }>
-                                    <Card title={x.name} bordered={false} hoverable>
+                                    <Card className="cards" title={x.name} bordered={false} hoverable>
                                         {"Team - " + x.team + " , " + "Location - " + x.location}
                                     </Card>
                                 </Link>

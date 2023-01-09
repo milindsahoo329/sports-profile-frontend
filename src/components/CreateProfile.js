@@ -42,9 +42,9 @@ const CreateProfile = ({}) => {
         ProfilesService.createProfile(payload)
             .then((response) => {
                 // console.log(response);
+                navigate('/view');
             })
 
-        navigate('/view');
     };
 
     return (
