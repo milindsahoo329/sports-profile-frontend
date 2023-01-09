@@ -13,11 +13,22 @@
     font-size: 3em;
 }
 
-.card-holder {
-    margin-top: 5%;
+.form-control {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
 }
 
-.landing-cards {
-    margin: 5%;
-    width: 20em;
+.ant-picker {
+    align-items: flex-start;
+}
+
+.create-profile{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.back-button{
+    margin-left: 5%;
+    margin-right: 5%;
 }
